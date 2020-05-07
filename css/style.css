@@ -87,7 +87,8 @@
   display: none;
 }
 
-.drag_panel, .feedback {
+.drag_panel,
+.feedback {
   padding: 1rem 2rem;
   width: 20%;
 }
@@ -131,7 +132,8 @@
 }
 
 .icon {
-  padding: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .icon img {
