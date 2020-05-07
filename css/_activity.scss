@@ -1,0 +1,73 @@
+.activity{
+    display: none;
+}
+
+.drag_panel, .feedback {
+    padding: 1rem 2rem;
+    width: 20%;
+}
+.feedback{
+    display: none;
+}
+.drag_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.drop {
+    border: 1px solid $black;
+    padding: 1rem;
+    width: 13vw;
+    flex: 1;
+    color: $brand;
+    font-weight: bold;
+}
+
+.business_canvas {
+    //border: 1px solid $black;
+    height: calc(100vh - 120px);
+    align-items: stretch;
+}
+
+.dropped_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icon {
+    padding: 0.5rem;
+
+    img {
+        width: 75px;
+        cursor: pointer;
+    }
+}
+
+.placed {
+    img {
+        width: 75px;
+    }
+}
+
+.title {
+    font-weight: bold;
+    color: $brand;
+}
+
+.drop {
+    .title {
+        height: 20px;
+        overflow: hidden;
+        position: relative;
+        span{
+            position: relative;
+        }
+    }
+}
+
+.instr{
+    padding: 0.5rem 1rem;
+    color: $brand;
+    font-style: italic;
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Naspresso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="load-wrapp">
+        <div class="load">
+            <div class="spinner">
+                <div class="bubble-1"></div>
+                <div class="bubble-2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <section class="sec logo">
+            <div class="container-fluid">
+                <div class="row center">
+                    <img src="image/logo.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="sec row screen">
+            <div class="header">
+
+                <div class="title flex-1">
+                    <h1>Title of the activity</h1>
+                </div>
+                <div>
+                    <img src="image/small_logo.png" alt="">
+                </div>
+            </div>
+            <div class="container video">
+                <div class="flex center">
+                    <video class="player" src="image/video.mp4" controls>
+                        Video is not supported in this browser
+                    </video>
+                </div>
+                <div class="center-text mt-2">
+                    After watching the video. Click next button to move to the activity.
+                    <img class="btn next" src="image/arrow-right.svg" alt="Next Button">
+                </div>
+            </div>
+            <div class="container-fluid activity">
+                <div class="instr">Drag the icon to appropriate business canvas area.</div>
+                <div class="flex">
+                    <div class="business_canvas flex-col flex-1">
+                        <div class="flex flex-3">
+                            <div class="drop full-width" data-id="1">
+                                <div class="title"><span>Key partners</span></div>
+                                <div class="dropped_item"></div>
+                            </div>
+                            <div class="flex-col full-width">
+                                <div class="drop" data-id="3|4|5">
+                                    <div class="title"><span>Key activities</span></div>
+                                    <div class="dropped_item"></div>
+                                </div>
+                                <div class="drop" data-id="2|6|7">
+                                    <div class="title"><span>Key resources</span></div>
+                                    <div class="dropped_item"></div>
+                                </div>
+                            </div>
+                            <div class="drop full-width" data-id="11">
+                                <div class="title"><span>Value propositions</span></div>
+                                <div class="dropped_item"></div>
+                            </div>
+                            <div class="flex-col full-width">
+                                <div class="drop" data-id="12">
+                                    <div class="title"><span>Customer relationships</span></div>
+                                    <div class="dropped_item"></div>
+                                </div>
+                                <div class="drop" data-id="13|16|17|18">
+                                    <div class="title"><span>Channels</span></div>
+                                    <div class="dropped_item"></div>
+                                </div>
+                            </div>
+                            <div class="drop full-width" data-id="0|14">
+                                <div class="title"><span>Customer segments</span></div>
+                                <div class="dropped_item"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-1">
+                            <div class="drop full-width" data-id="8|9|10">
+                                <div class="title"><span>Cost structure</span></div>
+                                <div class="dropped_item"></div>
+                            </div>
+                            <div class="drop full-width" data-id="15">
+                                <div class="title"><span>Revenue streams</span></div>
+                                <div class="dropped_item"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="drag_panel">
+                        <div class="title">
+                            Draggable Icon
+                        </div>
+                        <div class="drag_item">
+                            <div class="icon" ng-repeat="item in activity.drag" data-id="{{$index}}">
+                                <img ng-src="{{item.image}}" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback">
+                        <div class="title">
+                            Feedback
+                        </div>
+                        <p>You have now filled in the business model canvas for Nespresso. If you have any questions
+                            please let us know! Please fill in your questions in the form and we will discuss this.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/angular.min.js"></script>
+    <!-- <script src="js/TweenLite.min.js"></script> -->
+    <!-- <script src="js/TweenMax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
