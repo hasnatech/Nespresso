@@ -4,8 +4,8 @@
 
 .drag_panel,
 .feedback {
-    padding: 1rem 2rem;
-    width: 20%;
+    padding: 0rem 2rem;
+    width: 30%;
 }
 
 .feedback {
@@ -42,7 +42,7 @@
     padding-top: 0.5rem;
 
     img {
-        width: 75px;
+        width: 100px;
         cursor: pointer;
     }
 }
@@ -69,9 +69,13 @@
         }
     }
 }
-
-.instr {
+.content{
     padding: 0.5rem 1rem;
+}
+.instr {
+    /*padding: 0.5rem 1rem;*/
+    padding-bottom: 1rem;
     color: $brand;
     font-style: italic;
 }
+

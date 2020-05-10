@@ -1,7 +1,13 @@
 @import "_variable";
 @import "_breakpoints";
 @import "_loading";
+@import "_modal";
 @import "_activity";
+
+@font-face {
+  font-family: "HelveticaNeueLTStd", Helvetica, Arial, san-serif;
+  src: url("fonts/HelveticaNeueLTStdLt.otf");
+}
 
 body,
 html {
@@ -9,8 +15,11 @@ html {
   background: $white;
   overscroll-behavior: none;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "HelveticaNeueLTStd", Helvetica, Arial, san-serif;
+  //font-family: 'Roboto', sans-serif;
+  //font-family: adobe-garamond-pro, serif;
   overflow: hidden;
+  font-size: 16px;
 }
 
 .container {
@@ -86,22 +95,26 @@ html {
   border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: row;
-  padding: 0 20px;
+  padding-right: 20px;
   text-transform: uppercase;
   color: $brand;
 }
-.flex-col{
+
+.flex-col {
   display: flex;
   flex-direction: column;
 }
+
 .flex-1 {
   flex: 1;
 }
+
 .flex-3 {
   flex: 3;
 }
 
-.sec, .activity {
+.sec,
+.activity {
   display: none;
 }
 
@@ -113,11 +126,13 @@ html {
 .video {
   margin-top: 50px;
 }
-.mt-2{
+
+.mt-2 {
   margin-top: 2rem;
 }
+
 .btn {
-  margin-left: 16px;
+  /*margin-left: 16px;*/
   border: 2px solid $black;
   padding: 12px;
   height: 24px;
@@ -126,13 +141,16 @@ html {
   transition: 0.4s ease-in-out;
   vertical-align: middle;
   cursor: pointer;
-  &:hover{
+
+  &:hover {
     border: 2px solid $white;
     background-color: $brand;
   }
-  &:active{
+
+  &:active {
     transform: scale(0.9)
   }
+
   @include media("<=tablet") {
     padding: 6px;
     width: 20px;
@@ -144,4 +162,35 @@ html {
     width: 16px;
     height: 16px;
   }
+}
+h1{
+  margin-left: 10px;
+  transition: all 0.5s;
+}
+.back_btn {
+
+  transform: rotate(180deg);
+  margin: 10px;
+  margin-bottom: 0px;
+  display: none;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+
+//video::-webkit-media-controls-play-button {  display: none;}
+//video::-webkit-media-controls-timeline {}
+//video::-webkit-media-controls-current-time-display{}
+//video::-webkit-media-controls-time-remaining-display {}
+video::-webkit-media-controls-mute-button {
+  display: none;
+}
+
+video::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none;
 }

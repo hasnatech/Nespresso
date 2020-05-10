@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Naspresso</title>
+
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
@@ -29,9 +31,11 @@
 
         <section class="sec row screen">
             <div class="header">
-
+                <div>
+                    <img class="btn back_btn" src="image/arrow-right.svg" alt="">
+                </div>
                 <div class="title flex-1">
-                    <h1>Title of the activity</h1>
+                    <h1>Nespresso Business Model Canvas</h1>
                 </div>
                 <div>
                     <img src="image/small_logo.png" alt="">
@@ -44,12 +48,12 @@
                     </video>
                 </div>
                 <div class="center-text mt-2">
-                    After watching the video. Click next button to move to the activity.
+                    After watching the video, click the Next button to continue.
                     <img class="btn next" src="image/arrow-right.svg" alt="Next Button">
                 </div>
             </div>
             <div class="container-fluid activity">
-                <div class="instr">Drag the icon to appropriate business canvas area.</div>
+                <div class="content">Here are the 9 building blocks of Nespresso business model.</div>
                 <div class="flex">
                     <div class="business_canvas flex-col flex-1">
                         <div class="flex flex-3">
@@ -76,12 +80,12 @@
                                     <div class="title"><span>Customer relationships</span></div>
                                     <div class="dropped_item"></div>
                                 </div>
-                                <div class="drop" data-id="13|16|17|18">
+                                <div class="drop" data-id="0|13|16|17|18">
                                     <div class="title"><span>Channels</span></div>
                                     <div class="dropped_item"></div>
                                 </div>
                             </div>
-                            <div class="drop full-width" data-id="0|14">
+                            <div class="drop full-width" data-id="14|19">
                                 <div class="title"><span>Customer segments</span></div>
                                 <div class="dropped_item"></div>
                             </div>
@@ -98,26 +102,47 @@
                         </div>
                     </div>
                     <div class="drag_panel">
+                        <div class="instr">
+                            Drag each sticker given on the bottom and drop it into the Nespresso business model's
+                            appropriate block.
+                        </div>
                         <div class="title">
-                            Draggable Icon
+                            Draggable Stickers
                         </div>
                         <div class="drag_item">
-                            <div class="icon" ng-repeat="item in activity.drag" data-id="{{$index}}">
+                            <div class="icon" ng-repeat="item in activity.drag" data-id="{{item.id}}">
                                 <img ng-src="{{item.image}}" alt="icon">
                             </div>
                         </div>
                     </div>
                     <div class="feedback">
-                        <div class="title">
-                            Feedback
-                        </div>
                         <p>You have now filled in the business model canvas for Nespresso. If you have any questions
-                            please let us know! Please fill in your questions in the form and we will discuss this.</p>
+                            please let us know! Fill in your questions in the form and we will discuss this.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Modal -->
+        <div class="modal fade hide" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <div class="col">
+                            <p>You have now filled in the business model canvas for Nespresso.</p>
+                            <p>If you have any questions please let us know! </p>
+                            <p>Fill in your questions in the form and we will discuss this.</p>
+                            <button class="exit">Close</button>
+                        </div>
+                        <div class="col">
+                            <img src="image/question.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 

@@ -1,0 +1,55 @@
+.modal {
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+
+    &.hide {
+        display: none;
+    }
+
+    .modal-dialog {
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .modal-content {
+            max-width: 500px;
+            max-height: 300px;
+            background-color: #fff;
+            padding: 1rem;
+
+            .modal-header {
+                display: flex;
+                flex-direction: row;
+
+                .modal-title {
+                    flex: 1;
+                }
+            }
+
+            .modal-body {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+
+button.exit{
+    border: 0;
+    padding: 0.5rem 1rem;
+    background-color: $brand;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+}
