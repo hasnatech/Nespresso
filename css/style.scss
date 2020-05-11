@@ -163,10 +163,12 @@ html {
     height: 16px;
   }
 }
-h1{
+
+h1 {
   margin-left: 10px;
   transition: all 0.5s;
 }
+
 .back_btn {
 
   transform: rotate(180deg);
@@ -194,3 +196,21 @@ video::-webkit-media-controls-toggle-closed-captions-button {
 video::-webkit-media-controls-volume-slider {
   display: none;
 }
+
+.video_player {
+  position: relative;
+
+  .controls {
+    position: absolute;
+    bottom:5px;
+    left:0px;
+    padding: 10px;
+    right: 0px;
+    background-color: rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+    #play{
+      cursor: pointer;
+    }
+  }
+} 

@@ -130,27 +130,47 @@ function randomArrayShuffle(array) {
               amount: 1
             }
           })
-      }else{
+      } else {
         var tl = gsap.timeline();
         tl
-        .to(".video", { duration: 1, x: "-100%" })
-        .to(".video", 0, { css: { display: "none" } })
-        .to(".back_btn", 0, { css: { display: "block" } })
-        .to(".back_btn", 1, {
-          opacity: 1,
-          x: 0,
-          ease: "power4.out",
-        })
-          
+          .to(".video", { duration: 1, x: "-100%" })
+          .to(".video", 0, { css: { display: "none" } })
+          .to(".back_btn", 0, { css: { display: "block" } })
+          .to(".back_btn", 1, {
+            opacity: 1,
+            x: 0,
+            ease: "power4.out",
+          })
+
           .to(".activity", 1, {
             opacity: 1
           })
-          
-          
+
+
       }
 
       //.from(".activity", {duration: 1, x: "100%"})
     })
+    var is_play = true;
+
+    $(".player").get(0).onended = function () {
+      //alert("The audio has ended");
+      $("#play").attr("src", "image/play.png");
+      //$(".player").get(0).pause();
+    }
+
+    $("#play").click(function () {
+      if (is_play) {
+        $(this).attr("src", "image/play.png");
+        $(".player").get(0).pause();
+      } else {
+        $(this).attr("src", "image/pause.png");
+        $(".player").get(0).play();
+      }
+      is_play = !is_play;
+      console.log(is_play);
+    })
+
 
     $(".drag_item .icon").draggable({
       start: function () {

@@ -470,4 +470,24 @@ video::-webkit-media-controls-toggle-closed-captions-button {
 video::-webkit-media-controls-volume-slider {
   display: none;
 }
+
+.video_player {
+  position: relative;
+}
+
+.video_player .controls {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  padding: 10px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.video_player .controls #play {
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
